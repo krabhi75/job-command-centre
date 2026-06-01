@@ -23,9 +23,10 @@ async function init() {
       <div><span class="stat-value red">${newToday}</span><span class="stat-label">New Today</span></div>
     `;
 
-    if (data.updatedAt) {
-      metaEl.textContent = 'Last updated: ' + new Date(data.updatedAt).toLocaleString('en-IN');
-    }
+    const parts = [];
+    if (data.updatedAt) parts.push('Updated: ' + new Date(data.updatedAt).toLocaleString('en-IN'));
+    if (data.sourcesScraped?.length) parts.push('Sources: ' + data.sourcesScraped.join(', '));
+    if (parts.length) metaEl.textContent = parts.join(' · ');
 
     jobsEl.innerHTML = jobs
       .map(
@@ -41,6 +42,7 @@ async function init() {
             <span>${job.company}</span>
             <span>${job.location}</span>
             <span class="salary">${job.salary}</span>
+            ${job.source ? `<span style="opacity:0.65">${job.source}</span>` : ''}
           </div>
         </div>
         <div class="job-actions">

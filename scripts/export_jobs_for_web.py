@@ -92,6 +92,7 @@ def main() -> int:
     payload = {
         "updatedAt": datetime.now(timezone.utc).isoformat(),
         "profile": profile,
+        "sourcesScraped": data.get("sources_scraped", []),
         "jobs": jobs,
     }
 
