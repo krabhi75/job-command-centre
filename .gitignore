@@ -1,0 +1,16 @@
+.env
+*.pyc
+__pycache__/
+.venv/
+venv/
+node_modules/
+web/dist/
+job_output.json
+.DS_Store
+*.log
+.npm/
+agent-tools/
+agent-transcripts/
+mcps/
+terminals/
+*.canvas.status.json

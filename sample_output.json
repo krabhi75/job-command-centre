@@ -1,0 +1,141 @@
+{
+  "profile": {
+    "name": "Abhishek Kumar",
+    "title": "Product Manager",
+    "experience_years": 5,
+    "location": "India",
+    "domains": ["fintech", "saas", "edtech", "lending", "crm"],
+    "core_skills": ["product strategy", "roadmapping", "prd", "a/b testing"]
+  },
+  "scrape_timestamp": "2024-06-01T09:30:00.000Z",
+  "total_jobs": 187,
+  "summary": {
+    "high_probability": 32,
+    "medium_probability": 58,
+    "stretch_roles": 47,
+    "low_fit": 50
+  },
+  "jobs": {
+    "high_probability": [
+      {
+        "source": "LinkedIn",
+        "title": "Senior Product Manager - Fintech",
+        "company": "Razorpay",
+        "location": "Bangalore, India",
+        "salary": "₹35-50 LPA",
+        "experience": "4-6 years",
+        "description": "Lead payment products for enterprise clients. Drive product roadmap for payment gateway, UPI, and lending products. Work with Fortune 500 companies to scale payment infrastructure.",
+        "skills": ["Product Strategy", "Fintech", "API Products", "Payments", "B2B SaaS"],
+        "url": "https://razorpay.com/jobs/senior-pm-fintech-001",
+        "posted_date": "2 days ago",
+        "fit_score": 92,
+        "fit_breakdown": {
+          "domain_match": 28,
+          "skills_match": 29,
+          "experience_match": 20,
+          "location_match": 10,
+          "keywords_match": 5
+        }
+      },
+      {
+        "source": "Naukri",
+        "title": "Product Manager - Lending Platform",
+        "company": "Cred",
+        "location": "Bangalore",
+        "salary": "₹40-55 LPA",
+        "experience": "5-7 years",
+        "description": "Own the lending product vertical. Build credit products from scratch. Work with risk, ops, and engineering teams to scale loan products to millions of users.",
+        "skills": ["Lending", "Credit Products", "Product Analytics", "Growth", "Fintech"],
+        "url": "https://careers.cred.club/pm-lending-002",
+        "posted_date": "1 day ago",
+        "fit_score": 89,
+        "fit_breakdown": {
+          "domain_match": 30,
+          "skills_match": 26,
+          "experience_match": 20,
+          "location_match": 10,
+          "keywords_match": 3
+        }
+      },
+      {
+        "source": "Wellfound",
+        "title": "Senior PM - Collections & Recovery",
+        "company": "Paytm",
+        "location": "Noida",
+        "salary": "₹38-50 LPA",
+        "experience": "5-8 years",
+        "description": "Build collections CRM and recovery workflows. Direct match to Collections CRM experience. Own the entire delinquency management system.",
+        "skills": ["Collections", "Fintech", "Workflow Automation", "CRM", "Data Analytics"],
+        "url": "https://paytm.com/careers/spm-collections-003",
+        "posted_date": "1 day ago",
+        "fit_score": 91,
+        "fit_breakdown": {
+          "domain_match": 30,
+          "skills_match": 28,
+          "experience_match": 20,
+          "location_match": 10,
+          "keywords_match": 3
+        }
+      }
+    ],
+    "medium_probability": [
+      {
+        "source": "LinkedIn",
+        "title": "Product Manager - Consumer Fintech",
+        "company": "PhonePe",
+        "location": "Bangalore",
+        "salary": "₹30-45 LPA",
+        "experience": "3-5 years",
+        "description": "Drive consumer fintech products. Strong fintech match but more consumer-focused than your B2B background.",
+        "skills": ["Product Management", "Fintech", "Consumer Apps", "Growth"],
+        "url": "https://phonepe.com/careers/pm-consumer-004",
+        "posted_date": "6 days ago",
+        "fit_score": 76,
+        "fit_breakdown": {
+          "domain_match": 25,
+          "skills_match": 22,
+          "experience_match": 15,
+          "location_match": 10,
+          "keywords_match": 4
+        }
+      }
+    ],
+    "stretch_roles": [
+      {
+        "source": "Naukri",
+        "title": "Product Manager - E-commerce Platform",
+        "company": "Flipkart",
+        "location": "Bangalore",
+        "salary": "₹35-48 LPA",
+        "experience": "4-6 years",
+        "description": "Marketplace platform. Great brand but e-commerce domain new to you.",
+        "skills": ["E-commerce", "Product Management", "B2C", "Marketplace"],
+        "url": "https://flipkart.com/careers/pm-platform-005",
+        "posted_date": "4 days ago",
+        "fit_score": 62,
+        "fit_breakdown": {
+          "domain_match": 10,
+          "skills_match": 24,
+          "experience_match": 20,
+          "location_match": 10,
+          "keywords_match": 8
+        }
+      }
+    ]
+  },
+  "scraping_stats": {
+    "linkedin_jobs": 52,
+    "naukri_jobs": 68,
+    "wellfound_jobs": 41,
+    "internshala_jobs": 26,
+    "duration_seconds": 187.3,
+    "success_rate": 0.96
+  },
+  "recommendations": [
+    "Apply to all 32 high-probability matches within 48 hours",
+    "Customize cover letter highlighting your Collections CRM work for similar roles",
+    "Your Gold Loan product experience is highly relevant for lending PM roles",
+    "Consider upskilling in consumer products for PhonePe/Paytm type roles",
+    "Set up daily alerts for new fintech PM postings"
+  ]
+}

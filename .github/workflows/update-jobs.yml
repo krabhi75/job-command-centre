@@ -1,0 +1,59 @@
+name: Daily job dashboard update
+
+on:
+  schedule:
+    # 6:00 AM IST daily (00:30 UTC)
+    - cron: '30 0 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Scrape jobs (if Apify token set)
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        run: |
+          if [ -n "$APIFY_TOKEN" ]; then
+            python job_scraper_enhanced.py || echo "Scraper failed, using existing data"
+          else
+            echo "APIFY_TOKEN not set — updating from sample_output.json"
+          fi
+
+      - name: Export jobs.json for website
+        run: python scripts/export_jobs_for_web.py
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload site (web-static)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web-static
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

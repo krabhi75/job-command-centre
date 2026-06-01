@@ -1,0 +1,31 @@
+{
+  "updatedAt": "2026-06-01T05:30:00.000Z",
+  "profile": {
+    "name": "Abhishek Kumar",
+    "title": "Product Manager"
+  },
+  "jobs": [
+    { "id": "1", "title": "Senior PM - Fintech", "company": "Razorpay", "location": "Bangalore", "salary": "₹35-50 LPA", "fitScore": 95, "url": "https://razorpay.com/jobs", "source": "LinkedIn", "isNew": true, "isHot": true },
+    { "id": "2", "title": "PM - Collections CRM", "company": "Paytm", "location": "Noida", "salary": "₹38-50 LPA", "fitScore": 93, "url": "https://paytm.com/careers", "source": "Naukri", "isNew": true, "isHot": true },
+    { "id": "3", "title": "PM - Lending Platform", "company": "Cred", "location": "Bangalore", "salary": "₹40-55 LPA", "fitScore": 92, "url": "https://cred.club/careers", "source": "Wellfound", "isNew": true, "isHot": true },
+    { "id": "4", "title": "Product Manager - Payments", "company": "PhonePe", "location": "Bangalore", "salary": "₹35-48 LPA", "fitScore": 91, "url": "https://phonepe.com/careers", "source": "LinkedIn", "isNew": true, "isHot": false },
+    { "id": "5", "title": "Senior PM - Credit Products", "company": "Slice", "location": "Bangalore", "salary": "₹30-45 LPA", "fitScore": 90, "url": "https://sliceit.com/careers", "source": "Wellfound", "isNew": true, "isHot": false },
+    { "id": "6", "title": "PM - Digital Lending", "company": "KreditBee", "location": "Bangalore", "salary": "₹28-42 LPA", "fitScore": 88, "url": "https://kreditbee.in/careers", "source": "LinkedIn", "isNew": false, "isHot": true },
+    { "id": "7", "title": "Product Lead - Growth", "company": "CRED", "location": "Bangalore", "salary": "₹45-60 LPA", "fitScore": 87, "url": "https://cred.club/careers", "source": "Naukri", "isNew": false, "isHot": true },
+    { "id": "8", "title": "PM - Consumer Finance", "company": "Jupiter", "location": "Mumbai", "salary": "₹32-45 LPA", "fitScore": 86, "url": "https://jupiter.money/careers", "source": "Wellfound", "isNew": true, "isHot": false },
+    { "id": "9", "title": "Senior PM - UPI Products", "company": "Google Pay", "location": "Bangalore", "salary": "₹50-70 LPA", "fitScore": 85, "url": "https://careers.google.com", "source": "LinkedIn", "isNew": false, "isHot": true },
+    { "id": "10", "title": "PM - B2B Payments", "company": "Razorpay", "location": "Bangalore", "salary": "₹30-42 LPA", "fitScore": 84, "url": "https://razorpay.com/jobs", "source": "Naukri", "isNew": false, "isHot": false },
+    { "id": "11", "title": "Product Manager - Wallet", "company": "Amazon Pay", "location": "Bangalore", "salary": "₹45-65 LPA", "fitScore": 82, "url": "https://amazon.jobs", "source": "LinkedIn", "isNew": false, "isHot": false },
+    { "id": "12", "title": "PM - Credit Risk", "company": "MoneyTap", "location": "Bangalore", "salary": "₹25-38 LPA", "fitScore": 80, "url": "https://moneytap.com/careers", "source": "Wellfound", "isNew": true, "isHot": false },
+    { "id": "13", "title": "Senior PM - Insurance Tech", "company": "Policybazaar", "location": "Gurgaon", "salary": "₹35-50 LPA", "fitScore": 78, "url": "https://policybazaar.com/careers", "source": "Naukri", "isNew": false, "isHot": false },
+    { "id": "14", "title": "PM - Merchant Platform", "company": "Paytm", "location": "Noida", "salary": "₹30-45 LPA", "fitScore": 76, "url": "https://paytm.com/careers", "source": "LinkedIn", "isNew": false, "isHot": false },
+    { "id": "15", "title": "Product Lead - BNPL", "company": "LazyPay", "location": "Mumbai", "salary": "₹28-40 LPA", "fitScore": 74, "url": "https://lazypay.in/careers", "source": "Wellfound", "isNew": false, "isHot": false },
+    { "id": "16", "title": "PM - Banking Platform", "company": "Open Financial", "location": "Bangalore", "salary": "₹32-45 LPA", "fitScore": 72, "url": "https://open.money/careers", "source": "LinkedIn", "isNew": false, "isHot": false },
+    { "id": "17", "title": "Senior PM - Wealth Tech", "company": "Groww", "location": "Bangalore", "salary": "₹40-55 LPA", "fitScore": 70, "url": "https://groww.in/careers", "source": "Naukri", "isNew": true, "isHot": false },
+    { "id": "18", "title": "PM - Stock Trading", "company": "Zerodha", "location": "Bangalore", "salary": "₹35-50 LPA", "fitScore": 68, "url": "https://zerodha.com/careers", "source": "LinkedIn", "isNew": false, "isHot": false },
+    { "id": "19", "title": "Product Manager - Crypto", "company": "CoinDCX", "location": "Mumbai", "salary": "₹30-45 LPA", "fitScore": 65, "url": "https://coindcx.com/careers", "source": "Wellfound", "isNew": false, "isHot": false },
+    { "id": "20", "title": "PM - Investment Platform", "company": "Upstox", "location": "Mumbai", "salary": "₹28-42 LPA", "fitScore": 62, "url": "https://upstox.com/careers", "source": "Naukri", "isNew": false, "isHot": false },
+    { "id": "21", "title": "Senior PM - Tax Tech", "company": "ClearTax", "location": "Bangalore", "salary": "₹30-45 LPA", "fitScore": 58, "url": "https://cleartax.in/careers", "source": "LinkedIn", "isNew": false, "isHot": false },
+    { "id": "22", "title": "PM - Financial Analytics", "company": "Perfios", "location": "Bangalore", "salary": "₹25-38 LPA", "fitScore": 55, "url": "https://perfios.com/careers", "source": "Naukri", "isNew": false, "isHot": false }
+  ]
+}
