@@ -2,9 +2,14 @@ name: Daily job dashboard update
 
 on:
   schedule:
-    # 6:00 AM IST daily (00:30 UTC)
+    # 6:00 AM IST every day (00:30 UTC)
     - cron: '30 0 * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'web-static/jobs.json'
+      - 'job_output.json'
 
 permissions:
   contents: write
@@ -18,7 +23,7 @@ concurrency:
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 45
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -32,20 +37,22 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Scrape jobs (if Apify token set)
+      - name: Scrape jobs (free JobSpy — no Apify credits)
         env:
-          APIFY_SECRET: ${{ secrets.APIFY_TOKEN }}
-          APIFY_VAR: ${{ vars.APIFY_TOKEN }}
+          SCRAPER_BACKEND: free
         run: |
-          export APIFY_TOKEN="${APIFY_SECRET:-$APIFY_VAR}"
-          if [ -n "$APIFY_TOKEN" ]; then
-            python job_scraper_enhanced.py || echo "Scraper failed, using existing data"
-          else
-            echo "APIFY_TOKEN not set — add Repository secret APIFY_TOKEN under Settings → Secrets → Actions"
-          fi
+          python job_scraper_enhanced.py || echo "Scrape failed — export will use seed data"
 
       - name: Export jobs.json for website
         run: python scripts/export_jobs_for_web.py
+
+      - name: Commit updated jobs to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add web-static/jobs.json job_output.json 2>/dev/null || git add web-static/jobs.json
+          git diff --staged --quiet || git commit -m "chore: update jobs [skip ci]"
+          git push || echo "Nothing to push or push skipped"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

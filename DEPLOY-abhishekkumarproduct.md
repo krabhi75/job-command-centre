@@ -20,16 +20,27 @@ Your site will be live at: `https://<github-username>.github.io/<repo-name>/` un
 
 ---
 
-## Step 2 — Add Apify secret (live daily scraping)
+## Step 2 — Add Apify token (live daily scraping)
 
-1. Repo → **Settings** → **Secrets and variables** → **Actions**
-2. New secret: `APIFY_TOKEN` = your token from https://console.apify.com/settings/integrations
+1. Repo → **Settings** → **Secrets and variables** → **Actions** → **Secrets** tab
+2. **New repository secret** → Name: `APIFY_TOKEN` → paste token from https://console.apify.com/settings/integrations
 
-Without this, the workflow still runs daily but refreshes from `sample_output.json`.
+Use **Secrets**, not **Variables** (variables can be visible in the UI).
+
+If you already added it as an environment variable on `github-pages`, it still works — but move it to a **secret** for security and rotate the token if it was ever shared or screenshotted.
 
 ---
 
-## Step 3 — DNS (yes, you need a CNAME for subdomain)
+## Step 3 — Deploy the site first (fixes DNS check)
+
+1. Push latest code to `main`
+2. **Actions** → **Deploy Job Command Centre** → **Run workflow**
+3. Wait for green checkmark
+4. Then **Settings** → **Pages** → **Check again** on custom domain
+
+GitHub often shows "DNS check unsuccessful" until the **first successful deploy** exists.
+
+## Step 4 — DNS (CNAME for subdomain)
 
 At your domain registrar (where you bought **abhishekkumarproduct.co.in**):
 

@@ -57,9 +57,13 @@ DEDICATED_ACTORS = {
     "glassdoor": "orgupdate/glassdoor-jobs-scraper",
 }
 
-# When True: run aggregator + dedicated LinkedIn/Wellfound/Internshala
+# Scraper backend: "free" (JobSpy, no Apify) or "apify" (paid Apify actors)
+# Set in .env: SCRAPER_BACKEND=free
+SCRAPER_BACKEND = "free"
+
+# When True: run aggregator + dedicated LinkedIn/Wellfound/Internshala (Apify only)
 # When False: only dedicated actors (lower Apify cost)
-USE_AGGREGATOR = True
+USE_AGGREGATOR = False
 
 # Skip dedicated Naukri if aggregator already includes naukri
 SKIP_DEDICATED_WHEN_IN_PULSE = {"naukri", "indeed", "glassdoor"}

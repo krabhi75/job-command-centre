@@ -1,41 +1,33 @@
 """
-Enhanced Job Scraper with Environment Variables Support
-Load Apify token from .env file
+Job scraper entry point.
+Default: FREE open-source (JobSpy) — no Apify credits.
+Set SCRAPER_BACKEND=apify in .env to use Apify (paid).
 """
 
 import os
+import sys
+
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
 load_dotenv()
 
-# Now the job_scraper_apify.py will automatically read APIFY_TOKEN from .env
-# Usage:
-# 1. Copy .env.example to .env
-# 2. Add your Apify token to .env
-# 3. Run: python job_scraper_enhanced.py
+SCRAPER_BACKEND = os.getenv("SCRAPER_BACKEND", "free").strip().lower()
 
-from job_scraper_apify import *
 
-if __name__ == '__main__':
-    if not APIFY_TOKEN or APIFY_TOKEN == 'YOUR_APIFY_TOKEN_HERE':
-        print("=" * 80)
-        print("⚠️  APIFY_TOKEN not configured!")
-        print("=" * 80)
-        print()
-        print("Setup Instructions:")
-        print("1. Copy .env.example to .env:")
-        print("   cp .env.example .env")
-        print()
-        print("2. Get your Apify token:")
-        print("   https://console.apify.com/settings/integrations")
-        print()
-        print("3. Add token to .env file:")
-        print("   APIFY_TOKEN=your_actual_token_here")
-        print()
-        print("4. Run this script again:")
-        print("   python job_scraper_enhanced.py")
-        print()
-        print("=" * 80)
+def run():
+    if SCRAPER_BACKEND == "apify":
+        from job_scraper_apify import APIFY_TOKEN, main as apify_main
+
+        if not APIFY_TOKEN or APIFY_TOKEN == "YOUR_APIFY_TOKEN_HERE":
+            print("SCRAPER_BACKEND=apify but APIFY_TOKEN is missing.")
+            print("Set APIFY_TOKEN in .env or use SCRAPER_BACKEND=free (default).")
+            sys.exit(1)
+        apify_main()
     else:
-        main()
+        from job_scraper_free import main as free_main
+
+        free_main()
+
+
+if __name__ == "__main__":
+    run()
