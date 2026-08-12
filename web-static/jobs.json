@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-11T02:36:03.698309+00:00",
+  "updatedAt": "2026-08-12T03:05:31.743088+00:00",
   "profile": {
     "name": "Abhishek Kumar",
     "title": "Product Manager",
@@ -74,7 +74,8 @@
   },
   "sourcesScraped": [
     "Indeed",
-    "LinkedIn"
+    "LinkedIn",
+    "RemoteOK"
   ],
   "jobs": [
     {
